@@ -1,0 +1,146 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0 16px;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color:var(--primary);
+}
+
+.plane {
+
+  display: inline-block;
+   width: 28px;
+  animation: fly 2s infinite ease-in-out;
+}
+
+@keyframes fly {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+.nav {
+  display: flex;
+  gap: 20px;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  opacity: .9;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+.nav-link {
+  position: relative;       
+  color: var(--primary);              
+  text-decoration: none;    
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";               
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;                 
+  height: 2px;               
+  background-color: var(--primary); 
+  transition: width 0.3s ease;       
+}
+
+.nav-link:hover {
+  color: var(--primary);      
+  opacity: 1;
+}
+
+.nav-link:hover::after {
+  width: 100%;                 
+}
+
+
+.burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--text);
+  transition: .25s;
+}
+
+.burger span:nth-child(1) {
+  top: 14px;
+}
+
+.burger span:nth-child(2) {
+  top: 21px;
+}
+
+.burger span:nth-child(3) {
+  top: 28px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked+.burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#menu-toggle:checked+.burger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked+.burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#menu-toggle:checked~nav {
+  max-height: 300px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+}

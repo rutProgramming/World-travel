@@ -1,0 +1,7 @@
+
+.site-footer { border-top: 1px solid var(--border); background: rgba(10,13,18,.6); margin-top: 32px; }
+.footer-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); padding: 24px 0; }
+.social { list-style: none; padding: 0; margin: 0; }
+.social li { margin: 6px 0; }
+.icon { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 4px; background: rgba(255,255,255,.12); margin-right: 8px; }
+.copy { text-align: center; padding: 10px; color: var(--muted); border-top: 1px solid var(--border); }
