@@ -8,7 +8,27 @@
   flex: 1; 
   min-width: 280px; 
 }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
-form label { display: block; margin-bottom: 6px; }
-input, textarea { width: 100%; padding: 10px 12px; margin-bottom: 14px; border-radius: 10px; border: 1px solid var(--border); background: #0f1318; color: var(--text); }
-.form-error { color: var(--red); min-height: 1.2em; }
+.card { 
+  background: var(--card); 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 16px; 
+}
+form label { 
+  display: block; 
+  margin-bottom: 6px; 
+}
+input, textarea { 
+  width: 100%; 
+  padding: 10px 12px; 
+  margin-bottom: 14px; 
+  border-radius: 10px; 
+  border: 1px solid var(--border); 
+  background:var(--bg); 
+  color: var(--text); 
+}
+
+.form-error { 
+  color: var(--red); 
+  min-height: 1.2em; 
+}
